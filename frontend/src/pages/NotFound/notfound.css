@@ -1,0 +1,46 @@
+h1 {
+  font-size: 30px;
+  line-height: 60px;
+}
+span {
+  display: block;
+  font-size: 18px;
+  line-height: 30px;
+}
+.container {
+  width: 80%;
+  max-width: 1600px;
+  margin: auto;
+}
+.grid-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  grid-gap: 50px;
+}
+.colmun-left {
+  text-align: left;
+}
+.colmun-right {
+  text-align: right;
+}
+.px-spc-b-20 {
+  padding-bottom: 20px;
+}
+button.go-home {
+  padding: 5px 20px;
+  background: #ffa000;
+  border: transparent;
+  border-radius: 2px;
+  box-shadow: 0 0 2px rgb(0 0 0 / 30%);
+  cursor: pointer;
+  margin: 20px 0;
+  color: #fff;
+}
+button.go-home i {
+  color: #fff;
+}
+img {
+  display: block;
+  width: 100%;
+}
