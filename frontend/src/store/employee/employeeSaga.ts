@@ -30,10 +30,10 @@ import {
 
 import { IEmployee } from "./types";
 
+const uri = "http://localhost:5000/api/employees/";
+
 const employeeList = async () => {
-  const response = await axios.get<IEmployee[]>(
-    "http://localhost:5000/api/employees"
-  );
+  const response = await axios.get<IEmployee[]>(uri);
 
   return response;
 };
@@ -41,9 +41,7 @@ const employeeList = async () => {
 const employeeDelete = async (payload: { id: string }) => {
   const { id } = payload;
 
-  const response = await axios.delete(
-    `http://localhost:5000/api/employees/${id}`
-  );
+  const response = await axios.delete(uri + id);
   return response;
 };
 
@@ -54,7 +52,7 @@ const employeeRegister = async (payload: {
   gender: string;
 }) => {
   const response = await axios.post(
-    "http://localhost:5000/api/employees",
+    uri,
     { ...payload },
     {
       headers: {
@@ -80,7 +78,7 @@ const employeeUpdate = async (payload: {
     salary: payload.salary,
   };
   const response = await axios.put(
-    `http://localhost:5000/api/employees/${payload.id}`,
+    uri+payload.id
     { ...employee },
     {
       headers: {
