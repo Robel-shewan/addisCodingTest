@@ -1,6 +1,9 @@
 {
   "name": "backend",
   "version": "1.0.0",
+  "engines": {
+    "node": "17.3.0"
+  },
   "description": "For coding Exam in Addis Software company",
   "main": "index.js",
   "type": "module",
